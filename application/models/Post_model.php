@@ -27,4 +27,10 @@ class Post_model extends CI_Model{
 
         return $this->db->insert('posts',$data);
     }
+
+    public function delete_post($id){
+        $this->db->where('id',$id);
+        $this->db->delete('posts');
+        return true;
+    }
 }
