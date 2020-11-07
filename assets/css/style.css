@@ -4,3 +4,8 @@
     margin: 3px 0;
     background: #f4f4f4;
 }
+
+.post-thumb{
+    width: 40vh;
+    height: 40vh;
+}
