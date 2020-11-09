@@ -1,6 +1,6 @@
 <h2><?= $title; ?></h2>
 
-<?php echo validation_errors(); ?>
+<?php echo validation_errors() ?>
 
 <?php echo form_open_multipart('posts/create') ?>
   <div class="form-group">
@@ -25,5 +25,5 @@
     <label>Upload Image</label>
     <input type="file" class="form-control-file" name="post_image">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-default btn-secondary">Submit</button>
 </form>
