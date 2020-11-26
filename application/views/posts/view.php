@@ -8,7 +8,7 @@
 </div>
 
 <hr>
-<a class="btn btn-secondary pull-left" href="<?php echo site_url('posts/edit/' . $post['slug']) ?>">Edit</a>
-<?php echo form_open('posts/delete/' . $post['id']) ?>
-    <input type="submit" value="delete" class="btn btn-danger">
-</form>
+<div class="btn-toolbar">
+    <a class="col-md-1 btn btn-secondary mr-1" href="<?php echo site_url('posts/edit/' . $post['slug']) ?>">Edit</a>
+    <a class="col-md-1 btn btn-danger" href="<?php echo site_url('posts/delete/' . $post['id']) ?>">Delete</a>
+</div>
