@@ -39,7 +39,38 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo site_url('categories/create'); ?>">Create Category</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url('login'); ?>">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url('register'); ?>">Register</a>
+                </li>
             </ul>
         </div>
-    </nav><br><br>
+    </nav><br>
     <div class="container">
+        <?php if($this->session->flashdata('user_registered')): ?>
+            <p class="alert alert-success">
+                <?php echo $this->session->flashdata('user_registered'); ?>
+            </p>
+        <?php endif;?>
+        <?php if($this->session->flashdata('post_created')): ?>
+            <p class="alert alert-success">
+                <?php echo $this->session->flashdata('post_created'); ?>
+            </p>
+        <?php endif;?>
+        <?php if($this->session->flashdata('post_udpated')): ?>
+            <p class="alert alert-success">
+                <?php echo $this->session->flashdata('post_updated'); ?>
+            </p>
+        <?php endif;?>
+        <?php if($this->session->flashdata('post_deleted')): ?>
+            <p class="alert alert-success">
+                <?php echo $this->session->flashdata('post_deleted'); ?>
+            </p>
+        <?php endif;?>
+        <?php if($this->session->flashdata('category_created')): ?>
+            <p class="alert alert-success">
+                <?php echo $this->session->flashdata('category_created'); ?>
+            </p>
+        <?php endif;?>
